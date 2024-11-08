@@ -83,8 +83,4 @@ export default class App extends React.Component {
 ## Features
 * Crop and rotate image with `Expo.ImageManipulator`
 
-## Kown Issues
-
 ## If you have some problem open a issue
-
-## TO DO
