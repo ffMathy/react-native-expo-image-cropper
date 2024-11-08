@@ -66,7 +66,7 @@ export default class App extends React.Component {
                     <ExpoImageManipulator
                         photo={{ uri }}
                         isVisible={showModal}
-                        onPictureChoosed={(data) => {
+                        onPictureChosen={(data) => {
                             this.setState({ uri: data.uri })
                         }}
                         onToggleModal={() => this.setState({ showModal: !showModal })}
