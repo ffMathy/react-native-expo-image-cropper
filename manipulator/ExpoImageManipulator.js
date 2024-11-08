@@ -274,7 +274,7 @@ class ExpoImageManipulator extends Component {
     render() {
         const {
             isVisible,
-            onPictureChoosed,
+            onPictureChosen,
             borderColor = '#a4a4a4',
             allowRotate = true,
             pinchGestureEnabled,
@@ -346,7 +346,7 @@ class ExpoImageManipulator extends Component {
                                         <TouchableOpacity onPress={() => this.onFlipImage('horizontal')} style={{marginLeft: 10, width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
                                             <Image source={require('../assets/flip-horizontal.png')} style={{width: 24, height: 24}}></Image>
                                         </TouchableOpacity>
-                                        <TouchableOpacity onPress={() => {onPictureChoosed({ uri, base64 }); this.onToggleModal()}} style={{marginLeft: 10, width: 60, height: 32, alignItems: 'center', justifyContent: 'center'}}>
+                                        <TouchableOpacity onPress={() => {onPictureChosen({ uri, base64 }); this.onToggleModal()}} style={{marginLeft: 10, width: 60, height: 32, alignItems: 'center', justifyContent: 'center'}}>
                                             <Text style={{fontWeight: '500', color: 'white', fontSize: 18}}>{'DONE'}</Text>                                
                                         </TouchableOpacity>
                                     </View>
@@ -410,7 +410,7 @@ class ExpoImageManipulator extends Component {
 export default ExpoImageManipulator
 
 ExpoImageManipulator.defaultProps = {
-    onPictureChoosed: ({ uri, base64 }) => console.log('URI:', uri, base64),
+    onPictureChosen: ({ uri, base64 }) => console.log('URI:', uri, base64),
     btnTexts: {
         crop: 'Crop',
         rotate: 'Rotate',
@@ -428,7 +428,7 @@ ExpoImageManipulator.defaultProps = {
 
 ExpoImageManipulator.propTypes = {
     isVisible: PropTypes.bool.isRequired,
-    onPictureChoosed: PropTypes.func,
+    onPictureChosen: PropTypes.func,
     btnTexts: PropTypes.object,
     saveOptions: PropTypes.object,
     photo: PropTypes.object.isRequired,
